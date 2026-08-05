@@ -1,5 +1,0 @@
-#Exercìcio 06
-idade_usuario = input("Digite sua idade: ")
-idade_usuario = int(idade_usuario)
-
-print(idade_usuario)
