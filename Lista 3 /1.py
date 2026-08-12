@@ -1,5 +1,3 @@
-
-
 idades = [-1,-1,-1,-1,-1,-1]
 
 opcao = -1 
@@ -25,32 +23,3 @@ while opcao != 0:
                 print(idade)
     elif opcao == 0:
         print("Saindo")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# idades = [1, 2, 3, 4, 5, 6]
-
-# indice = 0 
-# while indice < len(idades):
-#     idades[indice] = int(input("Digite valor: "))
-#     #print("Item da lista =>", idades[indice])
-#     indice = indice + 1
-
-
-# for idade in idades:
-#     print("Valor é =>", idade)
