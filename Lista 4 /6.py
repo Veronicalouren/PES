@@ -59,6 +59,22 @@ while opcao != 0:
                 indice = indice + 1 
     
     elif opcao == 4:
+
+        if len(notas) == 0:
+            print("Lista vazia!")
+
+        else:
+            soma = 0
+            indice = 0
+
+            while indice < len(notas):
+                soma = soma + notas[indice]
+
+            # calcular a média
+            # mostrar a média
+
+            # verificar se média >= 6
+            # aprovado ou reprovado
         
 
     elif opcao == 0:
