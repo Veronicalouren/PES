@@ -1,56 +1,62 @@
-automoveis = [-1]*15
+placas = [0] * 15
 
+opcao = -1
 
+while opcao != 0:
 
-
-
-
-opcao = 0 
-menu = """
-# 1 - cadastrar 
-# 2 - Excluir 
+    print("""
+# 1 - Cadastrar
+# 2 - Excluir
 # 3 - Listar
-# 0 - Sair 
-"""
+# 0 - Sair
+""")
 
-while opcao != 0: 
-    print(menu)
-    print("Qual apção você quer?")
-    opcao = int(input("R: "))
+    opcao = int(input("Digite uma opção: "))
 
-if (opcao == 1):
-    print("Opção de cadastro selecionada")
-    indice = 0 
-    while indice < len(automoveis):
-        if automoveis[indice] == -1:
-            print("Foi encontrado uma vaga!")
-            print("Adicionando carro")
-            print("Qual é sua placa?")
+    if opcao == 1:
 
-            placa = input("R: ")
-            automoveis[indice] = placa
+        print("Opção de cadastro selecionada")
 
-            houve_cadastro = true 
-            break 
-        indice = indice + 1 
-    if houve_cadastro:
-        print("Cadastro com sucesso!")
-    else:
-        print("Sem vagas disponiveis")
+        indice = 0
 
-elif(opcao == 2):
-    print("Me diga qual a placa do carro que você deseja remover!")
-    placa = input("R: ")
+        while indice < len(placas):
 
-    #Buscar posição 
-    posicao = -1
-    indice = 0 
-    while indice < len(automoveis):
-        if automoveis[indice] == placa:
-            posicao = indice 
-        indice = indice + 1
-    
-    if(posicao != -1)
-       print("carro encontrado, removendo")
-       automoveis[posicao]
-                  
+            if placas[indice] == 0:
+
+                print("Foi encontrada uma vaga!")
+
+                placa = input("Digite a placa do seu carro: ")
+
+                placas[indice] = placa
+
+                break
+
+            indice = indice + 1
+
+        else:
+            print("Não há espaço disponível!")
+
+    elif opcao == 2:
+
+        placa = input("Digite a placa do carro que você deseja remover: ")
+
+        if placa in placas:
+
+            indice = placas.index(placa)
+
+            placas[indice] = 0
+
+            print("Placa removida com sucesso!")
+
+        else:
+            print("Placa não encontrada!")
+
+    elif opcao == 3:
+
+        indice = 0
+
+        while indice < len(placas):
+
+            print(f"A vaga {indice} é: {placas[indice]}")
+
+            indice = indice + 1
